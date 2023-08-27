@@ -46,7 +46,7 @@ variable "subnet1_name"{
 variable "sub2_cidr_block" {
     description = "subnet2 cidr block"
     type = string
-    default = "10.0.1./24"
+    default = "10.0.1.0/24"
 }
 
 variable "subnet2_availablity_zone" {
@@ -64,7 +64,7 @@ variable "subnet2_name"{
 variable "sub3_cidr_block" {
     description = "subnet3 cidr block"
     type = string
-    default = "10.0.0.2/24"
+    default = "10.0.2.0/24"
 }
 
 variable "subnet3_availablity_zone" {
@@ -83,7 +83,7 @@ variable "routetable" {
 }
 
 variable "myip" {
-    default = "1.38.103.41/32"
+    default = ["1.38.103.41/32"]
 }
 
 variable "app_port" {
@@ -97,7 +97,7 @@ variable "secruity_group_name" {
 #--------------------------------------
 
 variable "instance_ami" {
-    default = "abc"
+    default = "ami-0310483fb2b488153"
 }
 variable "instance_type" {
     default = "t2.micro"

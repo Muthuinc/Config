@@ -56,6 +56,12 @@ resource "aws_launch_template" "My_template" {
   #security_groups     = ["aws_security_group.group1.name"]
   #vpc_security_group_ids = ["sg-09afc32cea89cb106"]
   key_name = "Ava"
+  
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo systemctl restart docker
+              sudo docker restart $(sudo docker ps -aq)
+              EOF
   network_interfaces {
     associate_public_ip_address = true
     security_groups = [aws_security_group.group2.id]

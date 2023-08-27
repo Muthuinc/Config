@@ -9,6 +9,6 @@ echo $a
 
 #ansible-playbook --private-key=$Muthu --user=ubuntu --extra-vars="ansible_host=$a" ansible.yml
 
-sed -i "s/muthuu/$a/g" inventory.txt
+#sed -i "s/muthuu/$a/g" inventory.txt
 # inserting the dynamically created ip to the inventory.txt file 
 

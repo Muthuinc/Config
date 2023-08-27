@@ -32,15 +32,15 @@
       apt:
         name: python3-pip
         state: present
-    - name: pull an image                     # Pulling the published image
-      docker_image:
-        name: muthuinc/devopsthon:v1
-        source: pull
-    - name: start an image                    # Starting the image
-      docker_container:
-        name: my_container
-        image: muthuinc/devopsthon:v1
-        ports:
-          - "5000:5000"
+   # - name: pull an image                     # Pulling the published image
+    #  docker_image:
+     #   name: muthuinc/devopsthon:v1
+   #     source: pull
+  #  - name: start an image                    # Starting the image
+     # docker_container:
+      #  name: my_container
+      #  image: muthuinc/devopsthon:v1
+      #  ports:
+       #   - "5000:5000"
         
     

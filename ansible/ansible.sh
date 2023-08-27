@@ -7,8 +7,8 @@ a=$(aws ec2 describe-instances --region ap-southeast-2 --filters "Name=tag:Name,
 
 echo $a
 
-ansible-playbook --private-key=$Muthu --user=ubuntu --extra-vars="ansible_host=$a" ansible.yml
+#ansible-playbook --private-key=$Muthu --user=ubuntu --extra-vars="ansible_host=$a" ansible.yml
 
-#sed -i "s/muthuu/$a/g" inventory.txt
+sed -i "s/muthuu/$a/g" inventory.txt
 # inserting the dynamically created ip to the inventory.txt file 
 
